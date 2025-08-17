@@ -6,14 +6,19 @@ body {
 .main-content {
     display: flex;
 
-    margin: 15px;
+    width: 500px;
+
+
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
     border-bottom: 5px solid pink;
     
     background-color: #aeecff;
 }
 
-
+/* IMAGE STYLING */
 
 #me-img {
     width: 180px;
@@ -23,3 +28,37 @@ body {
     
 }
 
+/* TEXT STYLING */
+
+
+#nav-container {
+    width: 300px;
+}
+
+.list-item {
+    text-align: center;
+
+    text-decoration: none;
+    list-style-type: none;
+
+    
+}
+
+/* #name {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    
+
+
+}
+
+#position {
+    font-size: 20px;
+    padding-left: 80px;
+}
+
+#town {
+
+} */
