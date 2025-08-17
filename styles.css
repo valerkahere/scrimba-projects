@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+
+    margin: 15px;
+
+    border-bottom: 5px solid pink;
+    
+    background-color: #aeecff;
+}
+
+
+
+#me-img {
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    
+}
+
