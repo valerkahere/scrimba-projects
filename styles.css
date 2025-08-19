@@ -23,10 +23,12 @@ body {
    
 
 
-    border-bottom: 5px solid #FCA311;
+    
     border-radius: 30px;
     
     background: #1B1E23;
+
+    box-shadow: 8px 8px #FCA311;
 ;
 }
 
@@ -40,11 +42,14 @@ body {
 /* TEXT STYLING */
 
 .text {
-    color: #ffffff;
+    
     padding: 5px;
+
+    color: #ffffff;
 }
 
 #position {
+    text-shadow: 0 0 2px #ffffff;
     font-style: oblique;
     text-decoration: underline;
 }
