@@ -5,15 +5,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    margin: 20px;
+}
+
 .main-content {
     display: flex;
 
-    width: 500px;
-
-
-    margin-top: 15px;
+   
     margin-left: auto;
     margin-right: auto;
+
+    width: 400px;
 
     border-bottom: 5px solid #B1C6F4;
     
@@ -25,17 +28,10 @@
 
 
 #me-img {
-    width: 180px;
-    
-    
+    width: 150px;
 }
 
 /* TEXT STYLING */
-
-
-
-
-
 
 #name {
     
@@ -57,4 +53,9 @@
 
 #town {
     font-weight: 900;
+}
+
+
+.border-blue {
+    border: 3px dotted blue;
 }
