@@ -23,9 +23,10 @@ body {
    
 
 
-    border-bottom: 5px solid #B1C6F4;
+    border-bottom: 5px solid #FCA311;
+    border-radius: 30px;
     
-    background-color: #f4dfb1;
+    background: #1B1E23;
 ;
 }
 
@@ -39,7 +40,7 @@ body {
 /* TEXT STYLING */
 
 .text {
-    color: #222222;
+    color: #ffffff;
     padding: 5px;
 }
 
