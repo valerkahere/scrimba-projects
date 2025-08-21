@@ -30,8 +30,16 @@ body {
 
 }
 
-/* IMAGE STYLING */
+.card:hover {
+    cursor: pointer;
 
+}
+
+a {
+    text-decoration: none;
+}
+
+/* IMAGE STYLING */
 
 #me-img {
     width: 150px;
