@@ -1,0 +1,19 @@
+body {
+    color: white;
+    background: url(space.jpg);
+    background-size: cover;
+
+    text-align: center;
+    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+.btn {
+
+    padding: 5px 10px;
+
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+
+}
