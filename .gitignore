@@ -1,3 +1,12 @@
 # Ignoring images
 
 *.png
+
+# Private files
+
+**private**
+private/
+
+# vs code files
+
+**vs-code**
