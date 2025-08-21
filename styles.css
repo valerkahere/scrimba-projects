@@ -1,27 +1,25 @@
-* {
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
-    margin: 20px;
-}
 
-.card {
-    width: 400px;
-    
-    padding: 20px;
-    margin: 0 auto;
-   
+    min-height: 100vh;
+
+    margin: 0; /* important for full centering */
 
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+
+.child {
+    width: 400px;
     
+    padding: 20px;
    
-   
-
+    display: flex;
+    gap: 20px; /* instead of justify-content: space-around */
+    text-align: center;
+    align-items: center;
 
     
     border-radius: 30px;
