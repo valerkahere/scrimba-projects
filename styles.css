@@ -1,15 +1,15 @@
 body {
+    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background: url(private/space.jpg);
     background-size: cover;
 
     text-align: center;
-    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
  
 }
 
 .btn {
-
+    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif; /* Buttons don't inherit font-family */
     padding: 5px 10px;
 
     color: #000000;
@@ -20,4 +20,13 @@ body {
 
 .btn:hover {
     cursor: pointer;
+    
+}
+
+.btn:hover span {
+    display: none;    
+}
+
+.btn:hover:before {
+    content: "CLICK ME!";
 }
