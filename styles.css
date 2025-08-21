@@ -5,13 +5,13 @@ body {
     margin: 0; /* important for full centering */
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.child {
+.card {
     width: 400px;
     
     padding: 20px;
@@ -27,7 +27,7 @@ body {
     background: #1B1E23;
 
     box-shadow: 8px 8px #FCA311;
-;
+
 }
 
 /* IMAGE STYLING */
