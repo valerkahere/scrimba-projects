@@ -1,6 +1,6 @@
 body {
     color: white;
-    background: url(space.jpg);
+    background: url(private/space.jpg);
     background-size: cover;
 
     text-align: center;
@@ -16,4 +16,8 @@ body {
     background-color: #ffffff;
     border: none;
 
+}
+
+.btn:hover {
+    cursor: pointer;
 }
