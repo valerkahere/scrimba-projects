@@ -5,6 +5,10 @@ body {
     text-align: center;
 }
 
+.hero {
+    background-image: url(./assets/minions.gif);
+}
+
 #main-img {
     padding: 5px;
     display: block;
@@ -20,9 +24,11 @@ body {
 }
 
 .quiz:hover::after {
+    font-size: 32px;
     border: 2px solid red;
+    background-color: antiquewhite;
     content: "ДАШИН🎊🎊🎊🎊🎊";
-    text-shadow: 0px 0px 3px rgb(255, 0, 0);
+    text-shadow: 0px 0px 6px rgb(255, 0, 0);
 
 }
 
