@@ -8,8 +8,16 @@ body {
  
 }
 
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/* Button styling */
+
 .btn {
-    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif; /* Buttons don't inherit font-family */
+    font-family: inherit; /* Buttons don't inherit font-family */
     padding: 5px 10px;
 
     color: #000000;
