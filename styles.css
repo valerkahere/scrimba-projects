@@ -1,12 +1,16 @@
 body {
+    margin: 0;
     background-color: #F2EBDC;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-main {
     color: #c853ff;
 
     text-align: center;
+
+    border: 2px dashed #c853ff;
+}
+
+h1 {
+    margin-top: 0;
 }
 
 .biggest-text {
@@ -22,6 +26,7 @@ p {
 }
 
 .hero {
+    margin-top: 0;
     background-image: url(./assets/minions.gif);
 }
 
@@ -47,4 +52,15 @@ p {
     text-shadow: 0px 0px 6px rgb(255, 0, 0);
 
 }
+
+
+/* Sections Styling */
+.gif-section {
+    margin: 60px 0px;
+}
+
+.gif-section img {
+    width: 300px;
+}
+
 
