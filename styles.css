@@ -1,8 +1,24 @@
 body {
-    color: #c853ff;
     background-color: #F2EBDC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    color: #c853ff;
 
     text-align: center;
+}
+
+.biggest-text {
+    font-size: 48px;
+}
+
+.bigger-text {
+    font-size: 28px;
+}
+
+p {
+    font-weight: 900;
 }
 
 .hero {
@@ -27,7 +43,7 @@ body {
     font-size: 32px;
     border: 2px solid red;
     background-color: antiquewhite;
-    content: "ДАШИН🎊🎊🎊🎊🎊";
+    content: "ДАШИН!!!!!🎊🎊🎊🎊🎊";
     text-shadow: 0px 0px 6px rgb(255, 0, 0);
 
 }
