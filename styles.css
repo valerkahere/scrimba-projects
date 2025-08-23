@@ -3,7 +3,7 @@
 body {
     margin: 0;
     background-color: #F2EBDC;
-    border: 2px dashed #c853ff;
+    border: 3px solid #DCE3F2;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #5B0085;
@@ -13,31 +13,33 @@ body {
 
 /* Top-to-bottom styling /*
 
-/* header */
+/* header - top of the page */
 
-.header {
-    margin-top: 0;
+#header {
+    padding: 25px 10px 50px;
+    
+
     background-image: url(./assets/minions.gif);
+    background-size: cover;
 
     color: #c853ff;
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px #ffffff;
 
 }
 
 .title {
     margin-top: 0;
-    margin-bottom: 10px;
     font-size: 48px;
 }
 
 .subtitle {
     margin-top: 0px;
+    margin: 30px 5px;
     font-size: 28px;
 }
 
 
 #main-img {
-
     width: 150px;
 
     border: 2px solid #c853ff;
@@ -63,7 +65,7 @@ body {
 /* gift-sections styling */
 
 .gift-section {
-    margin: 20px 0px 50px;
+    margin: 50px 0px 0px 0px;
     font-weight: normal;
 } 
 
@@ -73,6 +75,15 @@ body {
 
 .gift-img {
     width: 300px;
+
+    border: 4px solid white;
 }
 
+/* footer - bottom of the page */
 
+#footer {
+    padding: 10px;
+    margin-top: 10px;
+
+    background-color: #DCE3F2;
+}
