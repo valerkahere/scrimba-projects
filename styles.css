@@ -1,11 +1,11 @@
-/* General styling */
+/* General styling for the whole page */
 
 body {
     margin: 0;
     background-color: #F2EBDC;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #5B0085;
-    text-shadow: 0px 0px 2px white;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
 
     text-align: center;
 
@@ -21,31 +21,25 @@ body {
     background-image: url(./assets/minions.gif);
 
     color: #c853ff;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+
 }
 
-
-h1 {
+.title {
     margin-top: 0;
-}
-
-.biggest-text {
+    margin-bottom: 10px;
     font-size: 48px;
 }
 
-.bigger-text {
+.subtitle {
+    margin-top: 0px;
     font-size: 28px;
-}
-
-p {
-    font-weight: 900;
 }
 
 
 #main-img {
-    padding: 5px;
-    display: block;
+
     width: 150px;
-    margin: 0px auto;
 
     border: 2px solid #c853ff;
     border-radius: 50%;
@@ -67,10 +61,10 @@ p {
 }
 
 
-/* Gift-Sections styling */
+/* gift-sections styling */
 
 .gift-section {
-    margin: 60px 0px;
+    margin: 20px 0px 50px;
 }
 
 .gift-section img {
