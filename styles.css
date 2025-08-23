@@ -3,13 +3,12 @@
 body {
     margin: 0;
     background-color: #F2EBDC;
+    border: 2px dashed #c853ff;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #5B0085;
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
-
     text-align: center;
-
-    border: 2px dashed #c853ff;
 }
 
 /* Top-to-bottom styling /*
@@ -65,9 +64,14 @@ body {
 
 .gift-section {
     margin: 20px 0px 50px;
+    font-weight: normal;
+} 
+
+.gift-hint {
+    font-weight: inherit;
 }
 
-.gift-section img {
+.gift-img {
     width: 300px;
 }
 
