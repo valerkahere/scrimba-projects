@@ -90,7 +90,7 @@ body {
 }
 
 .justpresent:hover {
-    background: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFkcnlxazJpOXB1YTVvenI3N2I0ZzMxaTVoNzMyMzByMWZ2c2d1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6gT5hWNOZxkVq/giphy.gif);
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFkcnlxazJpOXB1YTVvenI3N2I0ZzMxaTVoNzMyMzByMWZ2c2d1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6gT5hWNOZxkVq/giphy.gif);
 }
 
 /* footer - bottom of the page */
@@ -100,4 +100,24 @@ body {
     margin-top: 10px;
 
     background-color: #DCE3F2;
+}
+
+
+.wrapper {
+    width: 400px;
+    height: 400px;
+
+    overflow: hidden
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    transition: scale 300ms;
+}
+
+.image:hover {
+    scale: 1.2;
 }
