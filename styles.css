@@ -102,6 +102,10 @@ body {
     cursor: pointer;
 }
 
+img:hover {
+    content: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFkcnlxazJpOXB1YTVvenI3N2I0ZzMxaTVoNzMyMzByMWZ2c2d1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6gT5hWNOZxkVq/giphy.gif);
+}
+
 /* Specific GIFs styling */
 
 /* FIRST */
