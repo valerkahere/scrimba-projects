@@ -88,6 +88,7 @@ body {
 } 
 
 .gift-hint {
+    font-style: italic;
     font-weight: inherit;
 }
 
@@ -166,8 +167,16 @@ body {
     background-color: #DCE3F2;
 }
 
+.link:active {
+    color: darkblue;
+}
+
 .link:hover {
     text-decoration: none;
+}
+
+.link:visited {
+    color: #000000;
 }
 
 #hyperlink {
