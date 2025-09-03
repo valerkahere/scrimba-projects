@@ -1,0 +1,61 @@
+body {
+
+    min-height: 100vh;
+
+    margin: 0; /* important for full centering */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card {
+    width: 400px;
+    
+    padding: 20px;
+   
+    display: flex;
+    gap: 20px; /* instead of justify-content: space-around */
+    text-align: center;
+    align-items: center;
+
+    
+    border-radius: 30px;
+    
+    background: #1B1E23;
+
+    box-shadow: 8px 8px #FCA311;
+
+}
+
+.card:hover {
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* IMAGE STYLING */
+
+#me-img {
+    width: 150px;
+}
+
+/* TEXT STYLING */
+
+.text {
+    
+    padding: 5px;
+
+    color: #ffffff;
+}
+
+#position {
+    text-shadow: 0 0 2px #ffffff;
+    font-style: oblique;
+    text-decoration: underline;
+}
