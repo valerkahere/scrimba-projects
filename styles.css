@@ -1,0 +1,40 @@
+body {
+    font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background: url(./private/spaceanimated.gif);
+    background-size: cover;
+
+    text-align: center;
+ 
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/* Button styling */
+
+.btn {
+    font-family: inherit; /* Buttons don't inherit font-family */
+    padding: 5px 10px;
+
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    
+}
+
+.btn:hover span {
+    display: none;    
+}
+
+.btn:hover:before {
+    content: "CLICK ME!";
+}
