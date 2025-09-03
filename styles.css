@@ -1,0 +1,187 @@
+/* General styling for the whole page */
+
+body {
+    margin: 0;
+    background: linear-gradient(#fae3b2, #F2EBDC);
+    border: 3px solid #DCE3F2;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5B0085;
+    text-align: center;
+}
+
+/* Top-to-bottom styling /*
+
+/* header - top of the page */
+
+#header {
+    display: flex; /* Made header display flex */
+    flex-direction: column; /* Reason: proper background for text */
+    align-items: center;
+
+    padding: 25px 10px 50px;
+    
+
+    background-image: url(./assets/minions.gif);
+    background-size: cover;
+
+    color: #5B0085;
+    text-shadow: 0px 0px 3px #ffffff;
+
+    
+  
+}
+
+
+
+.title {
+    margin-top: 0;
+    font-size: 48px;
+
+    background-color: #fae3b2;
+}
+
+.subtitle {
+    margin-top: 0px;
+    margin: 30px 5px;
+    font-size: 28px;
+
+    background-color: #fae3b2;
+
+}
+
+.wrapper {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #c853ff;
+    border-radius: 50%;
+}
+
+#main-img {
+    width: 150px;
+    height: 150px;
+
+
+    object-fit: cover;
+
+    transition: scale 300ms;
+}
+
+#main-img:hover {
+    scale: 1.2;
+}
+
+#date {
+    background-color: #fae3b2;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+/* Interactive part styling */
+
+.quiz:hover .highlight {
+    display: none;
+}
+
+.quiz:hover::after {
+    border: 2px solid red;
+    content: "ДАШИН!!!!!🎊🎊🎊🎊🎊";
+    text-shadow: 0px 0px 5px rgb(255, 12, 12);
+
+}
+
+
+/* gift-sections styling */
+
+.gift-section {
+    margin: 35px 0px 0px 0px;
+    font-weight: normal;
+} 
+
+.gift-hint {
+    font-weight: inherit;
+}
+
+.gift-img {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+
+    border: 4px solid white;
+
+    cursor: pointer;
+}
+
+/* Specific GIFs styling */
+
+/* FIRST */
+
+#first {
+    height: 500px;
+}
+
+#first:hover {
+    content: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXQzaWlleHRicTJyMzNldGh0Y3J2NDc1eTlybnQ0MWRhMDVmM29ydCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lNF8yp3Rzwkzxx1jb5/giphy.gif);
+    object-fit: cover;
+}
+
+/* SECOND */
+
+#second {
+    height: 200px;
+}
+
+#second:hover {
+    content: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTYydHpqOTFmZzFpa3FmdzdoMDJmcjlmcTk1ZXVuMWFsaHVtcTZ3dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Dzlj2zr9k5kZQg8wfc/giphy.gif);
+}
+
+/* THIRD */
+
+#third {
+    height: 300px;
+}
+
+#third:hover {
+    content: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjBkZGpkdnducDB1cWpqcGl2Ymc1NzN6dDR4OWR3ODNmZGd5eWViNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lZxzroU33typuU/giphy.gif);
+}
+
+/* FOURTH */
+
+#fourth:hover {
+    content: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDc3cXM1NW5pdWt2aGxrNzI4Y2x5ejF0cGs1dzJndnpuanNxZTBiYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RcAqjtrbxJCqIzQZ6h/giphy.gif);
+}
+/* FIFTH */
+
+#fifth:hover {
+    content: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFkcnlxazJpOXB1YTVvenI3N2I0ZzMxaTVoNzMyMzByMWZ2c2d1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6gT5hWNOZxkVq/giphy.gif);
+}
+
+/* footer - bottom of the page */
+
+#footer {
+    padding: 10px;
+    margin-top: 10px;
+
+    background-color: #DCE3F2;
+}
+
+.link:active {
+    color: darkblue;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #000000;
+}
+
+#hyperlink {
+    display: inline;
+    width: 16px;
+    padding-left: 5px;
+    
+}
+

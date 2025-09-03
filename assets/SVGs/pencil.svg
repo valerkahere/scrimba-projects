@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 283.46 283.46">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-width: 24.36px;
+      }
+
+      .st0, .st1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st1 {
+        stroke-width: 22.9px;
+      }
+    </style>
+  </defs>
+  <polygon class="st1" points="216.49 12.15 16.64 215.75 68.39 268.46 268.24 64.86 216.49 12.15"/>
+  <line class="st0" x1="167.99" y1="61.56" x2="215.43" y2="109.69"/>
+</svg>
