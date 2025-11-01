@@ -2,8 +2,6 @@ let count = 0;
 let countEl = document.getElementById("count-el");
 
 (() => {
-    // On page reload, reset the value
-    document.getElementById("count-el").innerText = 0;
     
 
     const btn = document.getElementById("increment-btn");
