@@ -1,7 +1,7 @@
 <div align="center">
   
   # Scrimba Projects
-  _Or my path to  Web Development mastery_
+  _Or my path to  Web Development mastery👇_
   
 </div>
 
