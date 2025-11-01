@@ -1,3 +1,6 @@
+let count = 0;
+let countEl = document.getElementById("count-el");
+
 (() => {
     // On page reload, reset the value
     document.getElementById("count-el").innerText = 0;
@@ -12,9 +15,6 @@
 })();
 
 function Increment(event) {
-    const counter = document.getElementById("count-el");
-    const counterCurrentValue = counter.innerText;
-    document.getElementById("count-el").innerText = "";
-    counter.innerText += (parseInt(counterCurrentValue) + parseInt("1"));
-
+    count+=1;
+    countEl.innerText = count;
 }
