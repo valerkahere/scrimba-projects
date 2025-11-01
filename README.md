@@ -12,7 +12,7 @@ As suggested, this repo is dedicated to my progress with the [Frontend Developer
 > The repo is currently dedicated to tutorial projects
 
 Well, you might fairly ask:
-> -Why so, if Scrimba has their own built-in code editor in the browser and even automatic commits?
+> Why so, if Scrimba has their own built-in code editor in the browser and even automatic commits?
 
 And actually there is a number of reasons for this:
 1. **DIY approach**: 
