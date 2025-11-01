@@ -32,6 +32,10 @@ button {
     background: darkred;
 }
 
+#increment-btn:hover {
+    outline: 5px solid #e4b3e4;
+}
+
 #save-btn {
     background: darkgreen;
 }
