@@ -17,12 +17,12 @@ let countEl = document.getElementById("count-el");
 
 })();
 
-function increment(event) {
+function increment() {
     count+=1;
     countEl.innerText = count;
 }
 
-function save(event) {
+function save() {
 
     
     let saved = document.getElementById("saved");
@@ -49,5 +49,10 @@ function save(event) {
     
     // Когда сейв снова нажимается
     // Убрать точку, если она есть в конце
+
+    // After Saving — Clear the Counter
+    // To start all over again
+    count = 0;
+    countEl.textContent = count;
     
 }
