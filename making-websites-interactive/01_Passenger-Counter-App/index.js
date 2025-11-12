@@ -1,5 +1,7 @@
 let count = 0;
+let total = 0;
 let countEl = document.getElementById("count-el");
+let totalEl = document.getElementById("total");
 
 (() => {
     
@@ -26,7 +28,6 @@ function save() {
 
     
     let saved = document.getElementById("saved");
-    console.log(saved.textContent);
 
     // If there is a dot, it's removed
     if (saved.textContent.endsWith(".")) {
@@ -37,19 +38,34 @@ function save() {
     
     
     // Checking that save button wasn't cliked yet, so different display method is used
-    const savedSplit = saved.textContent.split(" ");
+    const savedSplit = saved.textContent.split("");
     // [2] because this is where number start to appear
-    if (!(parseInt(savedSplit[2]))) {
-        
-        saved.textContent += ` ${count}.`;
-        
-    } 
-    else {
-        saved.textContent += `, ${count}.`;
+
+    // for each elements of array
+    // if there is number
+    // true
+    let decision = false;
+    for (const element of savedSplit) {
+        if (parseInt(element)) { // ???
+            decision = true;
+            break;
+        }
     }
+
+    if (decision === true) {
+        saved.textContent += `, €${count}.`;
+    }
+    else {
+        saved.textContent += ` €${count}.`;
+    }
+
 
     // After Saving — Clear the Counter
     // To start all over again
+    // and update the total
+    total += count;
+    totalEl.textContent = `Total: €${total}`;
+
     count = 0;
     countEl.textContent = count;
     

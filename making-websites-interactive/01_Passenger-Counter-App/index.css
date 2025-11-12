@@ -1,53 +1,132 @@
 body {
-    background-image: url("station.jpg");
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 800px;
+
+    --text: #010203;
+    --text-bg: #FAFAFA;
+    --save-btn: red;
+    --increment-btn: green;
+
+
+
+    background: linear-gradient(rgba(218, 111, 111, 0.4), rgba(0,0,0,0.7)), url('background.png');
     background-size: cover;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: var(--text);
+    font-family: 'Asset', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     text-align: center;
+
 
     
 }
 
+.body__container {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+
+
+}
+
+/* Overlay to make background darker */
+/* body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 0.5);
+} */
+
 body * {
-    padding: 1.5rem 0;
+    text-align: center;
+    border-radius: 8px;
+    --body-margin-auto: 1rem auto; 
+    --body-padding: 1.5rem 1rem;
+    margin: var(--body-margin-auto);
+    padding: var(--body-padding);
+
+}
+
+h1, h2 {
+    background-color: var(--text-bg);
+    /* margin: var(--body-margin-auto); */
 }
 
 h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+        font-size: 2rem;
 }
 
 h2 {
-    margin: 0 auto;
-    max-width: 800px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.btn__wrapper * {
+    width: 100%;
+
+    margin: 0.5rem auto;
+    padding: 2rem 0;
 }
 
 button {
     display: block;
-    margin: 1rem auto;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    width: 100%;
+
+    color: var(--text-bg);
+    border-radius: 50px;
+    border: 3px solid var(--text-bg);
+
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+        
+    background-color: transparent;
+    
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 button:hover {
-    outline: 5px solid #e4b3e4;
+    cursor: pointer;
+    transform: translateY(-3px);
+    color: var(--text);
 }
 
-#increment-btn {
-    background: darkred;
+#increment-btn:hover {
+    background-color: var(--increment-btn);
+    border-color: var(--increment-btn);
 }
 
+#save-btn:hover {
+    background-color: var(--save-btn);
+    border-color: var(--save-btn);
+}
+
+/* #increment-btn {
+    background-color: darkred;
+} */
 
 
-#save-btn {
+
+/* #save-btn {
     background: darkgreen;
-}
+} */
 
+@media (min-width: 1024px) {
+    button {
+            font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+}
+ 
