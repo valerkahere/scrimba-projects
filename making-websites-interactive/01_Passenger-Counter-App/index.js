@@ -19,13 +19,14 @@ let countEl = document.getElementById("count-el");
 
 function increment() {
     count+=1;
-    countEl.innerText = count;
+    countEl.textContent = count;
 }
 
 function save() {
 
     
     let saved = document.getElementById("saved");
+    console.log(saved.textContent);
 
     // If there is a dot, it's removed
     if (saved.textContent.endsWith(".")) {
@@ -36,15 +37,15 @@ function save() {
     
     
     // Checking that save button wasn't cliked yet, so different display method is used
-    const savedSplit = saved.innerText.split(" ");
+    const savedSplit = saved.textContent.split(" ");
     // [2] because this is where number start to appear
     if (!(parseInt(savedSplit[2]))) {
         
-        saved.innerText += ` ${count}.`;
+        saved.textContent += ` ${count}.`;
         
     } 
     else {
-        saved.innerText += `, ${count}.`;
+        saved.textContent += `, ${count}.`;
     }
     
     // Когда сейв снова нажимается
