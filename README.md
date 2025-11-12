@@ -6,7 +6,7 @@
 </div>
 
 
-As suggested, this repo is dedicated to my progress with the [Frontend Developer Career Path](https://scrimba.com/frontend-path-c0j) on Scrimba.
+As suggested, this repo is dedicated to my progress with the [Frontend Developer Career Path](https://scrimba.com/frontend-path-c0j) on Scrimba, **all while successfully keeping an average gpa of 89 alongside my Software Development studies at ATU Sligo**.
 
 > [!NOTE]
 > The repo is currently dedicated to tutorial projects
