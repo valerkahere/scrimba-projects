@@ -47,9 +47,6 @@ function save() {
     else {
         saved.textContent += `, ${count}.`;
     }
-    
-    // Когда сейв снова нажимается
-    // Убрать точку, если она есть в конце
 
     // After Saving — Clear the Counter
     // To start all over again
