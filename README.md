@@ -9,7 +9,7 @@
 As suggested, this repo is dedicated to my progress with the [Frontend Developer Career Path](https://scrimba.com/frontend-path-c0j) on Scrimba, **all while successfully keeping an average gpa of 89 alongside my Software Development studies at ATU Sligo**.
 
 > [!NOTE]
-> The repo is currently dedicated to tutorial projects
+> The repo is currently dedicated to tutorial projects, although I tend to **personalise them** (for example, see [04birthday-GIFt](https://04birthday-gif-t.vercel.app/) or [01_Passenger-Counter-App (Money Counter)](https://countcoin.vercel.app/)).
 
 Well, you might fairly ask:
 > Why so, if Scrimba has their own built-in code editor in the browser and even automatic commits?

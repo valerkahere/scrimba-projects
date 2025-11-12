@@ -83,6 +83,9 @@ function save() {
 }
 
 function restart() {
+    count = 0;
+    total = 0;
+    
     countEl.textContent = countElBase;
     totalEl.textContent = totalElBase;
     savedEl.textContent = savedElBase;
