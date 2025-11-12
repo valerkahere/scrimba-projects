@@ -1,7 +1,13 @@
 let count = 0;
 let total = 0;
+
 let countEl = document.getElementById("count-el");
 let totalEl = document.getElementById("total");
+let savedEl = document.getElementById("saved");
+
+let countElBase = countEl.textContent;
+let totalElBase = totalEl.textContent;
+let savedElBase = savedEl.textContent;
 
 (() => {
     
@@ -17,6 +23,11 @@ let totalEl = document.getElementById("total");
         saveBtn.addEventListener("click", save)
     }
 
+    const restartBtn = document.getElementById("restart-btn");
+    if (restartBtn) {
+        restartBtn.addEventListener("click", restart)
+    }
+
 })();
 
 function increment() {
@@ -27,18 +38,18 @@ function increment() {
 function save() {
 
     
-    let saved = document.getElementById("saved");
+    
 
     // If there is a dot, it's removed
-    if (saved.textContent.endsWith(".")) {
-        saved.textContent = saved.textContent.slice(0, -1);
+    if (savedEl.textContent.endsWith(".")) {
+        savedEl.textContent = savedEl.textContent.slice(0, -1);
     }
 
 
     
     
     // Checking that save button wasn't cliked yet, so different display method is used
-    const savedSplit = saved.textContent.split("");
+    const savedSplit = savedEl.textContent.split("");
     // [2] because this is where number start to appear
 
     // for each elements of array
@@ -53,10 +64,10 @@ function save() {
     }
 
     if (decision === true) {
-        saved.textContent += `, €${count}.`;
+        savedEl.textContent += `, €${count}.`;
     }
     else {
-        saved.textContent += ` €${count}.`;
+        savedEl.textContent += ` €${count}.`;
     }
 
 
@@ -69,4 +80,10 @@ function save() {
     count = 0;
     countEl.textContent = count;
     
+}
+
+function restart() {
+    countEl.textContent = countElBase;
+    totalEl.textContent = totalElBase;
+    savedEl.textContent = savedElBase;
 }

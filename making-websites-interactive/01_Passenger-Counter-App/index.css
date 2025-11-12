@@ -100,7 +100,7 @@ button:hover {
     border-color: var(--increment-btn);
 }
 
-#save-btn:hover {
+.important-btn:hover {
     background-color: var(--save-btn);
     border-color: var(--save-btn);
 }
