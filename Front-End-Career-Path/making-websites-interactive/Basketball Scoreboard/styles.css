@@ -1,4 +1,13 @@
+@font-face {
+    font-family: "Cursed Timer ULiL";
+    src: url("/fonts/CursedTimerUlil-Aznm.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
 body {
     --bg: #222222;
     background-color: var(--bg);
+    color: white;
+    font-family: "Cursed Timer ULiL";
 }
