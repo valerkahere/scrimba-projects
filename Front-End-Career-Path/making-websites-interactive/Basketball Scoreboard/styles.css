@@ -26,8 +26,8 @@ body {
     background-color: var(--bg);
     color: var(--text);
 
-    --spacing: 5rem;
-    --container-size: 600px;
+    --spacing: 2rem;
+    --container-size: 400px;
 
     margin: 1rem;
     
@@ -99,8 +99,7 @@ button:hover svg path { /* so that svg's fill changes together with button on ho
  */
 .display__counter {
     background-color: var(--display-bg);
-    filter: drop-shadow(5px 5px 15px black);
-
+    filter: drop-shadow(1px 1px 5px black);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,12 +166,18 @@ svg {
     
 }
 
-
+@media(min-width: 768px) {
+    body * {
+        font-size: 1.75rem;
+        --container-size: 600px;
+    }
+}
 
 @media (min-width: 1024px) {
     body * {
-        font-size: 1.5rem;
-        --container-size: 1600px;
+        font-size: 2rem;
+        --container-size: 1200px;
+        --spacing: 5rem;
     }
 
     .container {
