@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Scoreboard</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <div class="display">
             <p class="display__title">home</p>
             <div class="display__counter">
-                <p class="display__count">0</p>
+                <p class="display__count" id="homeDisplay">0</p>
             </div>
             <div class="display__increment-group">
                 <button class="display__increment">+1</button>
@@ -23,7 +23,7 @@
         <div class="display">
             <p class="display__title">guest</p>
             <div class="display__counter">
-                <p class="display__count">0</p>
+                <p class="display__count" id="guestDisplay">0</p>
             </div>
             <div class="display__increment-group">
                 <button class="display__increment">+1</button>
@@ -40,6 +40,6 @@
             </svg>Start a New Game
         </button>
     
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

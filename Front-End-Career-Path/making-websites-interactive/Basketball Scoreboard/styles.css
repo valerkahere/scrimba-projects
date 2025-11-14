@@ -38,9 +38,25 @@ body * {
 }
 
 button {
+    cursor: pointer;
     color: var(--add-points-btn-contrastpass);
     border: 2px solid var(--add-points-btn-contrastpass);
     background-color: transparent;
+
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+button:hover {
+    color: var(--display-focus);
+    border-color: var(--display-focus);
+}
+
+path { /* so that transition works on svg as well */
+    transition: fill 0.2s ease-in-out;
+}
+
+button:hover svg path { /* so that svg's fill changes together with button on hover */
+    fill: var(--display-focus);
 }
 
 .container {
@@ -141,6 +157,8 @@ svg {
     width: 1em;
     
 }
+
+
 
 @media (min-width: 1024px) {
     body * {
