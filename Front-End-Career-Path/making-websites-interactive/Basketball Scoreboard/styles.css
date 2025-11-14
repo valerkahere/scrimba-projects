@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+.leader {
+    border: 5px solid var(--display-focus);
+}
+
 body {
     --bg: #002147;
     --text: #F9FAFB;
@@ -91,9 +95,11 @@ button:hover svg path { /* so that svg's fill changes together with button on ho
     font-size: 2rem;
     text-transform: uppercase;
 }
-
+/* drop-shadow(h-shadow v-shadow blur color)
+ */
 .display__counter {
     background-color: var(--display-bg);
+    filter: drop-shadow(5px 5px 15px black);
 
     display: flex;
     justify-content: center;
@@ -101,6 +107,9 @@ button:hover svg path { /* so that svg's fill changes together with button on ho
     width: 100%;
     min-height: 250px;
     flex: 1; 
+    
+    transition: border 0.1s ease-in-out;
+
 }
 
 .display__count {
