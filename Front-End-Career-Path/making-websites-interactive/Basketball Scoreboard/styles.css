@@ -7,7 +7,47 @@
 
 body {
     --bg: #222222;
+    --text: #F9FAFB;
+    --display-text: #FAF906;
+    --display-focus: #C9C804;
+    --display-bg: #080001;
+    --add-points-btn-contrastpass: #A4BEF3;
+    
     background-color: var(--bg);
-    color: white;
-    font-family: "Cursed Timer ULiL";
+    color: var(--text);
+    
+}
+
+body * {
+    border-radius: 8px;
+}
+
+button {
+    color: var(--add-points-btn-contrastpass);
+    border: 2px solid var(--add-points-btn-contrastpass);
+    background-color: transparent;
+}
+
+.container * {
+    margin: 1rem auto;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.display__counter {
+    font-family: "Cursed Timer ULiL",Verdana, Geneva, Tahoma, system-ui, "Segoe UI", sans-serif;
+    min-height: 30%;
+    
+    background-color: var(--display-bg);
+}
+
+#newgame {
+    display: block;
+    margin: 0 auto;
 }
