@@ -38,7 +38,6 @@ body * {
     font-family: Verdana, Geneva, Tahoma, "Segoe UI", system-ui, sans-serif;
     font-size: 1rem;
     letter-spacing: 0.1px;
-    line-height: 115%;
 }
 
 button {
@@ -61,6 +60,26 @@ path { /* so that transition works on svg as well */
 
 button:hover svg path { /* so that svg's fill changes together with button on hover */
     fill: var(--display-focus);
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p {
+    line-height: 115%;
+}
+
+#footer-text {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+    line-height: 140%;
+}
+
+a {
+    color: #A4BEF3;
 }
 
 .container {
@@ -176,7 +195,7 @@ svg {
 @media (min-width: 1024px) {
     body * {
         font-size: 2rem;
-        --container-size: 1200px;
+        --container-size: 1000px;
         --spacing: 5rem;
     }
 
@@ -204,6 +223,6 @@ svg {
     }
     
     #newgame {
-        padding: 2em 3em;
+        padding: 1em 3em;
     }
 }
