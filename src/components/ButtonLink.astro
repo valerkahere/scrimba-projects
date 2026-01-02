@@ -1,21 +1,23 @@
 ---
 interface Props {
+    className: 'button-link',
     href: string;
     text: string;
     variant?: 'btn-primary' | 'btn-secondary';
     isDownload?: boolean;
 }
-const {href, text, variant='btn-primary', isDownload} = Astro.props;
+const {className, href, text, variant='btn-primary', isDownload} = Astro.props;
 
-
+let classes = className;
+classes = classes + ' ' + variant;
 ---
 
 {isDownload &&
-    <a class={variant} href={href} download>{text}</a>
+    <a class={classes} href={href} download>{text}</a>
 }
 
 {!isDownload &&
-    <a class={variant} href={href}>{text}</a>
+    <a class={classes} href={href}>{text}</a>
 }
 
 <style>
