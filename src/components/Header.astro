@@ -11,7 +11,7 @@
         applications, robust back-end architecture, and efficient API
         integrations.
       </p>
-      <div class="button-container">
+      <div class="hero-buttons__wrapper">
         <a href="/projects">View projects</a>
         <a href="/resume.pdf" download>Download resume</a>
       </div>
@@ -25,6 +25,7 @@
   :root {
     --header-gap: 1rem;
     --hero-image-col-size: 20%;
+    --accent: #3121E1;
   }
 
   .container {
@@ -47,6 +48,16 @@
     justify-items: center;
   }
 
+  .accent {
+    color: var(--accent);
+  }
+
+  .hero-text__wrapper > h1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+
   .hero-image__container {
     /* Mobile: limiting the width of image */
     max-width: 300px;
@@ -62,7 +73,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    
+  }
+
+  .hero-buttons__wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1.5rem;
   }
 
   @media (min-width: 768px) {
@@ -78,5 +96,8 @@
       grid-column: 2;
     }
     
+    .hero-buttons__wrapper {
+      flex-direction: row;
+    }
   }
 </style>
