@@ -1,5 +1,12 @@
+---
+import ButtonLink from '../components/ButtonLink.astro';
+---
+
 <header id="header" class="container">
   <div class="content">
+    
+    
+    
     <div class="hero-text__wrapper">
       <h1>
         <span>Hi, I am Astra.</span>
@@ -12,8 +19,12 @@
         integrations.
       </p>
       <div class="hero-buttons__wrapper">
-        <a class="btn-primary" href="/projects">View projects</a>
-        <a class="btn-secondary" href="/resume.pdf" download>Download resume</a>
+        <ButtonLink href={'/projects'} text={"View projects"} variant={"btn-primary"}></ButtonLink>
+        <ButtonLink href={'/public/resume.pdf'} text={"Download CV"} variant={"btn-secondary"} isDownload></ButtonLink>
+<!--         
+      <ButtonLink href={'/projects'} text={"View projects"} variant={"primary"} />
+      <ButtonLink href={'/resume.pdf'} text={"Download resume"} variant={"secondary"} isDownload/> -->
+
       </div>
     </div>
 
@@ -86,27 +97,7 @@
     gap: 1.5rem;
   }
 
-  .btn-primary {
-    color: white;
-    background-color: var(--primary);
-    
-  }
-
-  .btn-secondary {
-    color: var(--primary);
-    background-color: white;
-    border: 2px solid var(--primary);
-  }
-
-  a {
-    flex-grow: 1;
-    padding: 0.75em 1.25em;
-    text-decoration: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
 
   @media (min-width: 768px) {
     /* 
