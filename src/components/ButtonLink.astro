@@ -1,6 +1,6 @@
 ---
 interface Props {
-    className: 'button-link',
+    className: 'btn',
     href: string;
     text: string;
     variant?: 'btn-primary' | 'btn-secondary';
@@ -9,7 +9,7 @@ interface Props {
 const {className, href, text, variant='btn-primary', isDownload} = Astro.props;
 
 let classes = className;
-classes = classes + ' ' + variant;
+classes += ` ${variant}`;
 ---
 
 {isDownload &&
@@ -21,11 +21,6 @@ classes = classes + ' ' + variant;
 }
 
 <style>
-    .btn {
-        text-align: left;
-        text-decoration: line-through;
-    }
-
     .btn-primary {
     color: white;
     background-color: var(--primary);
@@ -38,7 +33,7 @@ classes = classes + ' ' + variant;
     border: 2px solid var(--primary);
   }
 
-  a {
+  .btn {
     flex-grow: 1;
     padding: 0.75em 1.25em;
     text-decoration: none;
@@ -53,7 +48,7 @@ classes = classes + ' ' + variant;
     }
 
     /* So buttons are proportionally equal */
-    a {
+    .btn {
       flex-basis: 200px;
     }
   }
