@@ -1,6 +1,5 @@
-<header id="header" class="container py-3">
-  <div class="content
-    d-flex">
+<header id="header" class="container">
+  <div class="content">
     <div>
       <h1>
         <span>Hi, I am Astra.</span>
@@ -19,7 +18,7 @@
     </div>
 
     <div>
-      <img class="mx-auto" src="/images/me.png" alt="Anime girl">
+      <img src="/images/me.png" alt="Anime girl">
     </div>
 </header>
 <style>
@@ -27,36 +26,50 @@
     1 col on mobile
     2 col on desktop 
   */
-  .content {
-    width: 100%;
-    gap: 1rem;
-  }
-  img {
-    display: block;
-    max-width: 100%;
+  :root {
+    --header-gap: 1rem;
   }
 
-  header > .d-flex {
+  .container {
+    max-width: clamp(400px, 90%, 1000px);
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1.5rem 0;
+
+    display: flex;
     flex-direction: column;
+    gap: var(--header-gap);
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: 80%;
   }
 
   @media (min-width: 768px) {
     .content {
       gap: 2rem;
     }
-    div > img {
-      width: 100%;
-    }
 
     div:has(h1) {
-      width: calc(60% - 1rem);
-      align-self: center;
+      width: calc(60% - var(--header-gap));
+      align-self: flex-start;
     }
 
     div:has(img) {
       width: 40%;
     }
-    header > .d-flex {
+
+    img {
+      max-width: 100%;
+    }
+
+    .content {
       flex-direction: row;
     }
   }
