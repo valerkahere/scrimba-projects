@@ -1,26 +1,63 @@
-<header id="header">
-  <div class="content">
-    <h1>
-    <span>Hi, I am Astra.</span>
-      <span><span class="accent">Full-stack</span> Specialist!</span>
-    </h1>
-    <p class="description">
-    I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
-    and database management. I build scalable, high-performance web
-    applications, robust back-end architecture, and efficient API
-    integrations.
-    </p>
-    <div class="button-container">
-    <a href="/projects" >View projects</a>
-    <a href="/resume.pdf"  download>Download resume</a>
+<header id="header" class="container py-3">
+  <div class="content
+    d-flex">
+    <div>
+      <h1>
+        <span>Hi, I am Astra.</span>
+        <span><span class="accent">Full-stack</span> Specialist!</span>
+      </h1>
+      <p class="description">
+        I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
+        and database management. I build scalable, high-performance web
+        applications, robust back-end architecture, and efficient API
+        integrations.
+      </p>
+      <div class="button-container">
+        <a href="/projects">View projects</a>
+        <a href="/resume.pdf" download>Download resume</a>
+      </div>
     </div>
-  </div>
-  <img src="/images/me.png" />
+
+    <div>
+      <img class="mx-auto" src="/images/me.png" alt="Anime girl">
+    </div>
 </header>
 <style>
-  header {
-    p {
-      color: red;
+  /*
+    1 col on mobile
+    2 col on desktop 
+  */
+  .content {
+    width: 100%;
+    gap: 1rem;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  header > .d-flex {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      gap: 2rem;
+    }
+    div > img {
+      width: 100%;
+    }
+
+    div:has(h1) {
+      width: calc(60% - 1rem);
+      align-self: center;
+    }
+
+    div:has(img) {
+      width: 40%;
+    }
+    header > .d-flex {
+      flex-direction: row;
     }
   }
 </style>
