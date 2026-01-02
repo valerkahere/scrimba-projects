@@ -12,8 +12,8 @@
         integrations.
       </p>
       <div class="hero-buttons__wrapper">
-        <a href="/projects">View projects</a>
-        <a href="/resume.pdf" download>Download resume</a>
+        <a class="btn-primary" href="/projects">View projects</a>
+        <a class="btn-secondary" href="/resume.pdf" download>Download resume</a>
       </div>
     </div>
 
@@ -25,7 +25,7 @@
   :root {
     --header-gap: 1rem;
     --hero-image-col-size: 20%;
-    --accent: #3121E1;
+    --primary: #3121E1;
   }
 
   .container {
@@ -49,9 +49,13 @@
   }
 
   .accent {
-    color: var(--accent);
+    color: var(--primary);
   }
 
+  /* 
+    Flex Reasoning:
+    - 1st: so h1 breaks as needed
+  */
   .hero-text__wrapper > h1 {
     display: flex;
     flex-direction: column;
@@ -79,17 +83,36 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     gap: 1.5rem;
+  }
+
+  .btn-primary {
+    color: white;
+    background-color: var(--primary);
+    
+  }
+
+  .btn-secondary {
+    color: var(--primary);
+    background-color: white;
+    border: 2px solid var(--primary);
+  }
+
+  a {
+    flex-grow: 1;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
   }
 
   @media (min-width: 768px) {
     /* 
       Magic: 1.5fr vs 1fr roughly 60/40
       => automatically takes gap into account
+
+      Made it 1.7 so "Full-stack" and "Specialist" do not wrap
     */
     .content {
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.7fr 1fr;
     }
 
     .hero-image__container {
@@ -98,6 +121,11 @@
     
     .hero-buttons__wrapper {
       flex-direction: row;
+    }
+
+    /* So buttons are proportionally equal */
+    a {
+      flex-basis: 200px;
     }
   }
 </style>
