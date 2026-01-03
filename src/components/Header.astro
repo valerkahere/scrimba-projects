@@ -2,30 +2,28 @@
 import ButtonLink from '../components/ButtonLink.astro';
 ---
 
-<header id="header" class="container">
-  <div class="content">
-    
-    
-    
-    <div class="hero-text__wrapper">
-      <h1>
-        <span>Hi, I am Astra.</span>
-        <span><span class="accent">Full-stack</span> Specialist!</span>
-      </h1>
-      <p class="description">
-        I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
-        and database management. I build scalable, high-performance web
-        applications, robust back-end architecture, and efficient API
-        integrations.
-      </p>
-      <div class="hero-buttons__wrapper">
-        <ButtonLink className="btn" href={'/projects'} text={"View projects"} variant={"btn-primary"}></ButtonLink>
-        <ButtonLink className="btn" href={'/public/resume.pdf'} text={"Download CV"} variant={"btn-secondary"} isDownload></ButtonLink>
+<header id="header">
+    <div class="content">
+      <div class="hero-text__wrapper">
+        <h1>
+          <span>Hi, I am Astra.</span>
+          <span><span class="accent">Full-stack</span> Specialist!</span>
+        </h1>
+        <p class="description">
+          I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
+          and database management. I build scalable, high-performance web
+          applications, robust back-end architecture, and efficient API
+          integrations.
+        </p>
+        <div class="hero-buttons__wrapper">
+          <ButtonLink className="btn" href={'/projects'} text={"View projects"} variant={"btn-primary"}></ButtonLink>
+          <ButtonLink className="btn" href={'/public/resume.pdf'} text={"Download CV"} variant={"btn-secondary"} isDownload></ButtonLink>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-image__container">
-      <img src="/images/me.png" alt="Anime girl">
+      <div class="hero-image__container">
+        <img src="/images/me.png" alt="Anime girl">
+      </div>
     </div>
 </header>
 <style>
@@ -33,12 +31,6 @@ import ButtonLink from '../components/ButtonLink.astro';
     --header-gap: 1rem;
     --hero-image-col-size: 20%;
     --primary: #3121E1;
-  }
-
-  .container {
-    max-width: clamp(400px, 90%, 1000px);
-    padding: 0 15px;
-    margin-inline: auto;
   }
 
   .content {

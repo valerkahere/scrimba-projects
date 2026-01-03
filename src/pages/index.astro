@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageContainer from '../components/PageContainer.astro';
 import Header from '../components/Header.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
 ---
 
 <Layout>
-	<Header />
-	<ProjectsSection>
+	<PageContainer>
+		<Header />
+		<ProjectsSection />
+	</PageContainer>
 </Layout>
