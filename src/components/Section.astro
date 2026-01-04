@@ -17,11 +17,11 @@ const {dark=false} = Astro.props;
 }
 
 <style>
-    .dark {
-        background-color: var(--secondary);
-    }
-
     section {
         padding: 80px 0;
+        /* &.dark => If section has .dark class */ 
+        &.dark {
+            background-color: var(--secondary);
+        }
     }
 </style>
