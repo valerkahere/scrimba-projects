@@ -1,7 +1,8 @@
 ---
 import {Picture} from 'astro:assets'
-import Image from 'astro/components/Image.astro';
 import EcommerceDashboard from '/src/images/projects/project-1.png'
+import SaaSLandingPage from '/src/images/projects/project-2.png'
+import DevToolsChromeExtension from '/src/images/projects/project-3.png'
 
 
 const heading = "My Projects";
@@ -12,7 +13,8 @@ const projects = [
       title: "E-commerce Dashbord",
       slug: "project-1",
       description: "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
-      image: "/src/images/projects/project-1.png",
+      image: EcommerceDashboard,
+      alt: "E-commerce dashboard",
       githubURL: "https://github.com/jamesqquick",
       liveSiteURL: "https://jamesqquick.com"
     },
@@ -20,7 +22,8 @@ const projects = [
       title: "SaaS Landing Page",
       slug: "project-2",
       description: "A redesign of ABC’s landing page, improving UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
-      image: "/src/images/projects/project-2.png",
+      image: SaaSLandingPage,
+      alt: "SaaS Landing Page",
       githubURL: "https://github.com/jamesqquick",
       liveSiteURL: "https://jamesqquick.com"
     },
@@ -28,7 +31,8 @@ const projects = [
       title: "DevTools Chrome Extension",
       slug: "project-3",
       description: "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
-      image: "/src/images/projects/project-3.png",
+      image: DevToolsChromeExtension,
+      alt: "DevTools Chrome Extension",
       githubURL: "https://github.com/jamesqquick",
       liveSiteURL: "https://jamesqquick.com"
     }
@@ -45,18 +49,10 @@ const projects = [
   <div class="projects-container">
     {projects.map(project => (
         <div class="card">
-
-            <img src={project.image} alt="">
-
-            
+            <Picture layout="full-width" formats={['avif', 'webp']} src={project.image} alt={project.alt} />
             <h3><a href={project.liveSiteURL}>{project.title}</a></h3>
         </div>
     ))}
-
-    <div class="card">
-      <Picture formats={['avif', 'webp']} src={EcommerceDashboard} alt="E-commerce dashboard" />
-      <h3>DevTools Chrome Extension</h3>
-    </div>
   </div>
 </section>
 

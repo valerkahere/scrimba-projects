@@ -1,4 +1,6 @@
 ---
+import {Picture} from 'astro:assets'
+import pfp from '/src/images/me.png';
 import ButtonLink from '../components/ButtonLink.astro';
 ---
 
@@ -22,7 +24,12 @@ import ButtonLink from '../components/ButtonLink.astro';
       </div>
 
       <div class="hero-image__container">
-        <img src="/src/images/me.png" alt="Anime girl">
+        <Picture
+        layout="full-width"
+        formats={['avif', 'webp']}
+        src={pfp}
+        alt="Me, Astra"
+        loading="eager"/>
       </div>
     </div>
 </header>
