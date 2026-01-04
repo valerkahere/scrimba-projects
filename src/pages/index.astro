@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro'
 import PageContainer from '../components/PageContainer.astro';
 import Header from '../components/Header.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
@@ -7,7 +8,11 @@ import ProjectsSection from '../components/ProjectsSection.astro';
 
 <Layout>
 	<PageContainer>
-		<Header />
-		<ProjectsSection />
+		<Section dark>
+			<Header />
+		</Section>
+		<Section>
+			<ProjectsSection />
+		</Section>
 	</PageContainer>
 </Layout>
