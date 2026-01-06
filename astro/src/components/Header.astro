@@ -1,0 +1,127 @@
+---
+import {Picture} from 'astro:assets'
+import pfp from '/src/images/me.png';
+import ButtonLink from '../components/ButtonLink.astro';
+---
+
+<header id="header">
+    <div class="content">
+      <div class="hero-text__wrapper">
+        <h1>
+          <span>Hi, I am Astra.</span>
+          <span><span class="accent">Full-stack</span> Specialist!</span>
+        </h1>
+        <p class="description">
+          I’m a Full-Stack Developer specializing in React.js, Next.js, Node.js,
+          and database management. I build scalable, high-performance web
+          applications, robust back-end architecture, and efficient API
+          integrations.
+        </p>
+        <div class="hero-buttons__wrapper">
+          <ButtonLink className="btn" href={'/projects'} text={"View projects"} variant={"btn-primary"}></ButtonLink>
+          <ButtonLink className="btn" href={'/resume.pdf'} text={"Download CV"} variant={"btn-secondary"} isDownload></ButtonLink>
+        </div>
+      </div>
+
+      <div class="hero-image__container">
+        <Picture
+        layout="full-width"
+        formats={['avif', 'webp']}
+        src={pfp}
+        alt="Me, Astra"
+        loading="eager"/>
+      </div>
+    </div>
+</header>
+<style>
+  :root {
+    --header-gap: 1rem;
+    --hero-image-col-size: 20%;
+
+    --primary: #3121E1;
+    --secondary: #F8F9FF;
+    --dark-pretty: #21243D;
+    --light: #8695A4;
+    --white: #FDFDFD;
+    --white-diff: #F7F7F7;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+
+    padding: 1.5rem 0;
+
+    /* Mobile default: 1 Col */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--header-gap);
+    align-items: center; /* Vertically centers text with image */
+    justify-items: center;
+  }
+
+  .accent {
+    color: var(--primary);
+  }
+
+  /* 
+    Flex Reasoning:
+    - 1st: so h1 breaks as needed
+  */
+  .hero-text__wrapper > h1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .hero-image__container {
+    /* Mobile: limiting the width of image */
+    max-width: 300px;
+    margin-inline: auto;
+
+    /* Aspect ratio prevents layout shift while loading */
+    aspect-ratio: 1/1;
+    grid-row: 1; /* image appears first on mobile */
+  }
+
+  .hero-image__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-buttons__wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  
+
+  @media (min-width: 768px) {
+    /* 
+      Magic: 1.5fr vs 1fr roughly 60/40
+      => automatically takes gap into account
+
+      Made it 1.7 so "Full-stack" and "Specialist" do not wrap
+    */
+    .content {
+      grid-template-columns: 1.7fr 1fr;
+    }
+
+    .hero-image__container {
+      grid-column: 2;
+    }
+    
+    .hero-buttons__wrapper {
+      flex-direction: row;
+    }
+
+    /* So buttons are proportionally equal */
+    a {
+      flex-basis: 200px;
+    }
+  }
+</style>

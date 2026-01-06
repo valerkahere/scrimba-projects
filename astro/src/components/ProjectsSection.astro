@@ -1,0 +1,119 @@
+---
+import {Picture} from 'astro:assets'
+import EcommerceDashboard from '/src/images/projects/project-1.png'
+import SaaSLandingPage from '/src/images/projects/project-2.png'
+import DevToolsChromeExtension from '/src/images/projects/project-3.png'
+
+
+const heading = "My Projects";
+const cta = { text: 'View All', href: '/projects' };
+
+const projects = [
+    {
+      title: "E-commerce Dashbord",
+      slug: "project-1",
+      description: "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
+      image: EcommerceDashboard,
+      alt: "E-commerce dashboard",
+      githubURL: "https://github.com/jamesqquick",
+      liveSiteURL: "https://jamesqquick.com"
+    },
+    {
+      title: "SaaS Landing Page",
+      slug: "project-2",
+      description: "A redesign of ABC’s landing page, improving UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
+      image: SaaSLandingPage,
+      alt: "SaaS Landing Page",
+      githubURL: "https://github.com/jamesqquick",
+      liveSiteURL: "https://jamesqquick.com"
+    },
+    {
+      title: "DevTools Chrome Extension",
+      slug: "project-3",
+      description: "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
+      image: DevToolsChromeExtension,
+      alt: "DevTools Chrome Extension",
+      githubURL: "https://github.com/jamesqquick",
+      liveSiteURL: "https://jamesqquick.com"
+    }
+  ]
+---
+<section>
+  <div class="section-header">
+      <h2>
+        {heading}
+      </h2>
+      <a href={cta.href}>{cta.text}</a>
+  </div>
+
+  <div class="projects-container">
+    {projects.map(project => (
+        <div class="card">
+            <Picture layout="full-width" formats={['avif', 'webp']} src={project.image} alt={project.alt} />
+            <h3><a href={project.liveSiteURL}>{project.title}</a></h3>
+        </div>
+    ))}
+  </div>
+</section>
+
+<style>
+   a {
+        text-decoration: none;
+        font-weight: 900;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+        
+        gap: 2rem;
+        
+        .card {
+          transition: transform 0.3s;
+          display: flex;
+          flex-direction: column;
+
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          
+        
+        
+
+        h3 {
+          margin-top: 20px;
+        }
+        
+        a {
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        @media (min-width: 768px) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+        
+        }
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+        margin: 0;
+        font-weight: 600;
+    } 
+
+  }
+
+
+</style>
