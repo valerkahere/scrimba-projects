@@ -1,0 +1,17 @@
+---
+import data from "../data/skills.json";
+let skills = data.skills;
+
+const heading = "My Skills"
+
+---
+
+<section>
+	<h2>{heading}</h2>
+	<ul>
+	   { skills.map( skill => (
+        <li>{skill}</li>
+      ))
+     }
+	</ul>
+</section>
