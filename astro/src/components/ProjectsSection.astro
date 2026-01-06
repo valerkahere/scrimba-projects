@@ -22,7 +22,7 @@ let projects = projectsData.projects;
   <div class="projects-container">
     {projects.map(project => (
         <div class="card">
-            <Picture layout="full-width" formats={['avif', 'webp']} src={project.image} alt={project.alt} />
+            <img src={project.image} alt={project.alt}>
             <h3><a href={project.liveSiteURL}>{project.title}</a></h3>
         </div>
     ))}
