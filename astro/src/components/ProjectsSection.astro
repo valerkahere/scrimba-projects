@@ -8,35 +8,8 @@ import DevToolsChromeExtension from '/src/images/projects/project-3.png'
 const heading = "My Projects";
 const cta = { text: 'View All', href: '/projects' };
 
-const projects = [
-    {
-      title: "E-commerce Dashbord",
-      slug: "project-1",
-      description: "A fast, scalable admin panel for managing products, orders, and sales analytics. Built with React, Next.js, Firebase, and TailwindCSS.",
-      image: EcommerceDashboard,
-      alt: "E-commerce dashboard",
-      githubURL: "https://github.com/jamesqquick",
-      liveSiteURL: "https://jamesqquick.com"
-    },
-    {
-      title: "SaaS Landing Page",
-      slug: "project-2",
-      description: "A redesign of ABC’s landing page, improving UI/UX, conversion rates, and performance. Built with Next.js, TailwindCSS, and Framer Motion.",
-      image: SaaSLandingPage,
-      alt: "SaaS Landing Page",
-      githubURL: "https://github.com/jamesqquick",
-      liveSiteURL: "https://jamesqquick.com"
-    },
-    {
-      title: "DevTools Chrome Extension",
-      slug: "project-3",
-      description: "A Chrome DevTools extension for monitoring API requests in real-time. It provides live request logging and response analysis for developers.",
-      image: DevToolsChromeExtension,
-      alt: "DevTools Chrome Extension",
-      githubURL: "https://github.com/jamesqquick",
-      liveSiteURL: "https://jamesqquick.com"
-    }
-  ]
+import projectsData from '../data/projects.json';
+let projects = projectsData.projects;
 ---
 <section>
   <div class="section-header">
@@ -47,11 +20,13 @@ const projects = [
   </div>
 
   <div class="projects-container">
-    {projects.map(project => (
-        <div class="card">
-            <Picture layout="full-width" formats={['avif', 'webp']} src={project.image} alt={project.alt} />
-            <h3><a href={project.liveSiteURL}>{project.title}</a></h3>
-        </div>
+    {projects.forEach(project => (
+        
+        console.log(typeof JSON.parse(JSON.stringify(project)).image)
+        // <div class="card">
+        //     <Picture layout="full-width" formats={['avif', 'webp']} src={(project.image)} alt={project.alt} />
+        //     <h3><a href={project.liveSiteURL}>{project.title}</a></h3>
+        // </div>
     ))}
   </div>
 </section>
