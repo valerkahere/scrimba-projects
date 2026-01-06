@@ -11,8 +11,12 @@ notes/
 # ignoring vscode config files
 
 **vscode**
+*.vs*
 **vs**
 **vs**/
 
 # ignoring node modules
 **node**
+
+# ignoring astro files
+astro/.astro

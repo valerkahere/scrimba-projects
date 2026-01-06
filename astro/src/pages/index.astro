@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro'
+import PageContainer from '../components/PageContainer.astro';
+import Header from '../components/Header.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+---
+
+<Layout>
+	<Section>
+		<PageContainer>
+			<Header />
+		</PageContainer>
+	</Section>
+	<Section dark>
+		<PageContainer>
+			<ProjectsSection />
+		</PageContainer>
+	</Section>
+</Layout>

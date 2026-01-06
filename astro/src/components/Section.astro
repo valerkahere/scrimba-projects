@@ -1,0 +1,27 @@
+---
+interface Props {
+    dark?: boolean
+}
+const {dark=false} = Astro.props;
+---
+{dark &&
+    <section class="dark">
+        <slot></slot>
+    </section>
+}
+
+{!dark &&
+    <section>
+        <slot></slot>
+    </section>
+}
+
+<style>
+    section {
+        padding: 80px 0;
+        /* &.dark => If section has .dark class */ 
+        &.dark {
+            background-color: var(--secondary);
+        }
+    }
+</style>
