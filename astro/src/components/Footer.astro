@@ -1,0 +1,50 @@
+---
+import Container from "./Container.astro";
+import Section from "./Section.astro"
+---
+<footer class="footer">
+        <Section dark>
+            <Container>
+            <div class="nav-items">
+                <a href="#"><img src="/icons/email.svg" alt=""></a>
+                <a href="#"><img src="/icons/github.svg" alt=""></a>
+                <a href="#"><img src="/icons/linkedin.svg" alt=""></a>
+                <a href="#"><img src="/icons/x.svg" alt=""></a>
+            </div>
+            <p class="rights-text">Copyright © 2025 Astra All rights reserved</p>
+            <p class="credit-text">Images: Flaticon.com</p>
+            </Container>
+        </Section>
+    
+</footer>
+<style>
+    .footer {
+        p {
+            text-align: center;
+            color: var(--light);
+            margin-top: 8px;
+            font-size: 14px
+        }
+        Section {
+            padding: 2rem 0;}
+        .nav-items {
+        margin-block-end: 1rem;
+        margin-block-start: 1rem;
+        padding-inline-start: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 1.5rem;
+
+        justify-content: center;
+
+        a {
+            display: grid;
+            place-items: center; /* Centers both horizontally and vertically */ 
+            img {
+                width: 100%;
+            }
+        }
+      }
+    }
+    
+</style>
