@@ -11,5 +11,18 @@ const project = defineCollection({
         slug: z.string(),
         githubURL: z.string(),
         liveSiteURL: z.string()
-    })
+    }),
 });
+
+const blog = defineCollection({
+    loader: glob({pattern: "**/*.md", base: "src/data/blog"}),
+    schema: z.object({
+        title: z.string(),
+        description: z.string().max(200), // will be 200 chars total - cut it down
+        image: z.string(),
+        date: z.string().date(),
+        tags: z.array(z.string()),
+    }),
+});
+
+export const collections = {project, blog};
