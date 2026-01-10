@@ -2,9 +2,10 @@
 import {Picture} from 'astro:assets'
 import pfp from '/src/images/me.png';
 import ButtonLink from '../components/ButtonLink.astro';
+import Section from '../components/Section.astro';
 ---
-
-<header id="header">
+<Section>
+  <header id="header">
     <div class="content">
       <div class="hero-text__wrapper">
         <h1>
@@ -33,6 +34,8 @@ import ButtonLink from '../components/ButtonLink.astro';
       </div>
     </div>
 </header>
+</Section>
+
 <style>
   :root {
     --header-gap: 1rem;

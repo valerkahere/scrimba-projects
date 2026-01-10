@@ -1,29 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Section from '../components/Section.astro'
-import PageContainer from '../components/Container.astro';
 import Header from '../components/Header.astro';
-import ProjectsSection from '../components/ProjectsSection.astro';
-
-import MySkills from '../components/MySkills.astro';
+import MyProjectsSection from '../components/MyProjectsSection.astro';
 ---
 
 <Layout>
-	<Navbar/>
-	<Section>
-		<PageContainer>
-			<Header />
-		</PageContainer>
-	</Section>
-	<Section dark>
-		<PageContainer>
-			<ProjectsSection />
-		</PageContainer>
-	</Section>
-	<Section dark>
-		<PageContainer>
-			<MySkills />
-		</PageContainer>
-	</Section>
+	<Header/>
+	<MyProjectsSection/>
 </Layout>

@@ -1,5 +1,4 @@
-{
-   "projects":[
+[
       {
          "title":"E-commerce Dashbord",
          "slug":"project-1",
@@ -27,5 +26,4 @@
          "githubURL":"https://github.com/jamesqquick",
          "liveSiteURL":"https://jamesqquick.com"
       }
-   ]
-}
+]
