@@ -25,4 +25,4 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = {project, blog};
+export const collections = {project, blog}; // export so they're accessible to use
