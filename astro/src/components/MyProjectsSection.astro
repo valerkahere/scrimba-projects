@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 // Get all 'src/data/projects.json' entries?
 const projects = await getCollection('project');
 console.log(projects);
+console.log('Found Projects: ', JSON.stringify(projects, null, 2))
 
 const heading = "My Projects";
 const cta = { text: 'View All', href: '/projects' };
