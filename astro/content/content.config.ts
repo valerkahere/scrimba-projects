@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { z } from 'astro/zod';
 
-// Configuration object
+// Configuration object. Verifying the path: astro\src\data\projects.json
 const project = defineCollection({
     loader: file('./src/data/projects.json'), // loader is looking for one file
     schema: z.object({ // schema definition: working definition for what data inside json is gonna look like - query this data with APIs
@@ -14,7 +14,6 @@ const project = defineCollection({
         liveSiteURL: z.string(),
     }),
 });
-
 const blog = defineCollection({
     loader: glob({pattern: "**/*.md", base: "./src/data/blog"}),
     schema: z.object({
