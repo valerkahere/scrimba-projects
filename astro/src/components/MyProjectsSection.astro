@@ -4,9 +4,9 @@ import SectionHeader from "./SectionHeader.astro"
 import { getCollection } from "astro:content";
 // Get all 'src/data/projects.json' entries?
 const projects = await getCollection('project');
-const blogs = await getCollection('blog');
+
 console.log(projects);
-console.log(blogs);
+
 
 const heading = "My Projects";
 const cta = { text: 'View All', href: '/projects' };
