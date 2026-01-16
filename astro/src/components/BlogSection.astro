@@ -29,7 +29,7 @@ const cta = {text: 'View blog', href:"/blog"};
         </div>
         <p class="description">{blog.data.description}</p>
         <ButtonLink
-          href={blog.id}
+          href={`/blog/${blog.id}`}
           text="Read article"
           variant="secondary"
         />
