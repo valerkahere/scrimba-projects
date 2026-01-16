@@ -1,55 +1,52 @@
 ---
 interface Props {
-    className: 'btn',
     href: string;
     text: string;
-    variant?: 'btn-primary' | 'btn-secondary';
+    variant?: 'primary' | 'secondary';
     isDownload?: boolean;
 }
-const {className, href, text, variant='btn-primary', isDownload} = Astro.props;
 
-let classes = className;
-classes += ` ${variant}`;
+const { href, text, variant = 'primary', isDownload } = Astro.props;
 ---
 
 {isDownload &&
-    <a class={classes} href={href} download>{text}</a>
+  <a class={`button-link ${variant}`} download href={href}>{text}</a>
 }
 
 {!isDownload &&
-    <a class={classes} href={href}>{text}</a>
+  <a class={`button-link ${variant}`}  href={href}>{text}</a>
 }
 
 <style>
-    .btn-primary {
-    color: white;
-    background-color: var(--primary);
-    
-  }
-
-  .btn-secondary {
-    color: var(--primary);
-    background-color: white;
-    border: 2px solid var(--primary);
-  }
-
-  .btn {
-    flex-grow: 1;
-    padding: 0.75em 1.25em;
-    text-decoration: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (min-width: 768px) {
-    .hero-buttons__wrapper {
-      flex-direction: row;
+    a {
+      padding: 14px 32px;
+      display: block;
+      underline: none;
+      width: 230px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
     }
 
-    /* So buttons are proportionally equal */
-    .btn {
-      flex-basis: 200px;
+    @media screen and (max-width: 600px) {
+      a {
+        font-size: 14px;
+        width: 100%;
+      }
+        
     }
-  }
+
+    .primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+
 </style>

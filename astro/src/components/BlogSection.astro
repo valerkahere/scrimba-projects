@@ -8,8 +8,6 @@ import ButtonLink from './ButtonLink.astro';
 
 //query blog posts
 const blogs = await getCollection('blog');
-console.log(blogs);
-
 const heading = 'Blog';
 const cta = {text: 'View blog', href:"/blog"};
 ---
@@ -24,27 +22,20 @@ const cta = {text: 'View blog', href:"/blog"};
         <div class="blog-card">
           <h3>{blog.data.title}</h3>
           <div class="metadata">
-            
+            <p class="date">{blog.data.date}</p>
+            <span class="vertical-separator"></span>
+            <p class="tags">{blog.data.tags.join(", ")}</p>
           </div>
         </div>
-        
+        <p class="description">{blog.data.description}</p>
+        <ButtonLink
+          href={blog.id}
+          text="Read article"
+          variant="secondary"
+        />
+        <HorizontalSeparator></HorizontalSeparator>
       ))
     }
-    <div class="blog-card">
-  <h3>Blog Title</h3>
-  <div class="metadata">
-    <p class="date">02/07/2025</p>
-    <span class="vertical-separator"></span>
-    <p class="tags">{['frontend', 'backend'].join(", ")}</p>
-  </div>
-  <p class="description">This is the description</p>
-  <ButtonLink
-  className='btn'
-    href={`/blog/post1`}
-    text="Read article"
-    variant="btn-secondary"
-  />
-</div>
 </Section>
 
 
