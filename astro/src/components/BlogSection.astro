@@ -9,7 +9,7 @@ import HorizontalSeparator from './HorizontalSeparator.astro';
 
 //query blog posts
 const blogs = await getCollection('blog');
-
+console.log(blogs);
 
 const heading = 'Blog';
 const cta = {text: 'View blog', href:"/blog"};
