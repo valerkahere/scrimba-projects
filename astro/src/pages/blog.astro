@@ -2,26 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-import BlogCard from '../components/BlogCard.astro';
-
-import Section from '../components/Section.astro';
-import HorizontalSeparator from '../components/HorizontalSeparator.astro';
 import Container from '../components/Container.astro';
+import Navbar from '../components/Navbar.astro';
+import BlogSection from '../components/BlogSection.astro';
 
 //query blog posts
 const blogs = await getCollection('blog');
 ---
 
 <Layout>
+    <Navbar></Navbar>
     <Container>
         <h1>Blog</h1>
     </Container>
-    
-<!-- For each blog - use the component: separating component and display logic  -->
-{blogs.map(blog => (
-  <Section>
-    <BlogCard blog={blog}/>
-    <HorizontalSeparator/>
-</Section>
-))}
+    <BlogSection></BlogSection>
+
 </Layout>
