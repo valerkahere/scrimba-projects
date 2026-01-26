@@ -19,8 +19,8 @@ import Section from '../components/Section.astro';
           integrations.
         </p>
         <div class="hero-buttons__wrapper">
-          <ButtonLink className="btn" href={'/projects'} text={"View projects"} variant={"btn-primary"}></ButtonLink>
-          <ButtonLink className="btn" href={'/resume.pdf'} text={"Download CV"} variant={"btn-secondary"} isDownload></ButtonLink>
+          <ButtonLink href={'/projects'} text={"View projects"} variant={"primary"}></ButtonLink>
+          <ButtonLink href={'/resume.pdf'} text={"Download CV"} variant={"secondary"} isDownload></ButtonLink>
         </div>
       </div>
 
@@ -37,18 +37,6 @@ import Section from '../components/Section.astro';
 </Section>
 
 <style>
-  :root {
-    --header-gap: 1rem;
-    --hero-image-col-size: 20%;
-
-    --primary: #3121E1;
-    --secondary: #F8F9FF;
-    --dark-pretty: #21243D;
-    --light: #8695A4;
-    --white: #FDFDFD;
-    --white-diff: #F7F7F7;
-  }
-
   .content {
     width: 100%;
     height: 100%;
