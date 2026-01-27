@@ -2,58 +2,43 @@
 import Layout from '../../layouts/Layout.astro';
 import Section from '../../components/Section.astro';
 import Navbar from '../../components/Navbar.astro';
+
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-    const posts = await getCollection("blog");
+    const posts = await getCollection("posts");
     return posts.map(post => ({
         params: {slug: post.id}, // ID HERE IS THE NAME OF THE FILE in /src/data/blog/*
         props: { post } // post is the object itself
     }))
 }
+// const posts = await getCollection('posts');
+// console.log(posts);
 
 interface Props {
-    post: CollectionEntry<"blog">;
+    post: CollectionEntry<"posts">;
 }
 const { post } = Astro.props;
-
 const { Content } = await render(post);
+// const { post } = Astro.props;
+// const { Content } = await render(post);
 ---
+<!-- <ul>
+  {posts.map(post => (
+    <li>
+      <a href={`/posts/${post.id}`}>{post.data.title}</a>
+      {post.body}
+    </li>
+  ))}
+</ul> -->
+
 <Layout>
     <Navbar/>
     <Section>
         <div class="post">
-            <img src={post.data.image} alt={post.data.title} class="post-image">
             <h1 class="post-title">{post.data.title}</h1>
-            <p>{post.data.date}</p>
             <Content/>
         </div>
     </Section>
 </Layout>
-
-<style>
-    .post {
-    .post-image {
-      width: 100%;
-      object-fit: cover;
-      margin-bottom: 40px;
-      border-radius: 10px;
-    }
-
-    .post-title {
-      margin-bottom: 16px;
-    }
-
-    .post-date {
-      font-size: 20px;
-      color: var(--light);
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      margin-top: 30px;
-    }
-  }
-</style>
