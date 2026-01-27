@@ -16,7 +16,7 @@ const project = defineCollection({
     }),
 });
 const blog = defineCollection({
-    loader: glob({pattern: "**/*.md", base: "./src/data/blog"}),
+    loader: glob({pattern: "**/*.md", base: "src/data/blog"}),
     schema: z.object({
         title: z.string(),
         description: z.string().max(200), // will be 200 chars total - cut it down
@@ -26,4 +26,12 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = {project, blog}; // export so they're accessible to use
+const posts = defineCollection({
+    loader: glob({pattern: "**/*.mdoc", base: "src/content/posts"}),
+    schema: z.object({
+        title: z.string(),
+    }),
+});
+
+
+export const collections = {posts, project, blog}; // export so they're accessible to use
