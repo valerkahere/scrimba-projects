@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Navbar from '../components/Navbar.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+
+import { getCollection } from 'astro:content';
+
+
+//query blog posts
+const posts = await getCollection('posts');
+console.log(posts);
+---
+
+<Layout>
+    <Navbar></Navbar>
+    <Container>
+        <h1>Posts!</h1>
+        {posts.map(post => (
+        <h3>{post.data.title}</h3>
+        <ButtonLink
+        href={`/posts/${post.id}`}
+        text="Read article"
+        variant="secondary"
+      />
+    ))}
+    </Container>
+</Layout>
