@@ -10,8 +10,12 @@ import "../styles/global.css"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-	</head>
-	<body>
+	</head> 
+	<!-- so that button sits in the middle of the screen -->
+	<body class="h-screen flex items-center justify-center">
 		<h1 class="text-3x1 font-bold underline">Astro</h1>
+		<button
+		class="h-8 w-16 bg-red-500 text-white px-4 py-2 rounded-full fond-bold text-2xl hover:bg-red-700 hover:uppercase"
+		>Click me</button>
 	</body>
 </html>
