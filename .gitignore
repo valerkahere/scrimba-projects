@@ -18,4 +18,5 @@ notes/
 # ignoring node modules
 **node**
 
-.*
+# astro
+.astro/
