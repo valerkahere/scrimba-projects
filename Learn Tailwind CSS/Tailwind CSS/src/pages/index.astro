@@ -1,21 +1,22 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head> 
-	<!-- so that button sits in the middle of the screen -->
-	<body class="h-screen flex items-center justify-center">
-		<h1 class="text-3x1 font-bold underline">Astro</h1>
-		<button
-		class="h-8 w-16 bg-red-500 text-white px-4 py-2 rounded-full fond-bold text-2xl hover:bg-red-700 hover:uppercase"
-		>Click me</button>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <!-- so that button sits in the middle of the screen -->
+  <body class="flex h-screen items-center justify-center">
+    <h1 class="text-3x1 font-bold underline">Astro</h1>
+    <button
+      class="h-8 w-16 rounded-full bg-red-500 px-4 py-2 text-2xl font-bold text-white hover:bg-red-700 hover:uppercase"
+      >Click me</button
+    >
+  </body>
 </html>
