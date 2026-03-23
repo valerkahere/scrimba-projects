@@ -5,11 +5,11 @@ import { z } from 'astro/zod';
 // Configuration object. Verifying the path: astro\src\data\projects.json
 const project = defineCollection({
     loader: file('src/data/projects.json'), // loader is looking for one file
-    schema: z.object({ // schema definition: working definition for what data inside json is gonna look like - query this data with APIs
+    schema: ({image}) => z.object({ // schema definition: working definition for what data inside json is gonna look like - query this data with APIs
         title: z.string(),
         slug: z.string(),
         description: z.string().optional(),
-        image: z.string(),
+        image: image(),
         alt: z.string(),
         githubURL: z.string(),
         liveSiteURL: z.string(),

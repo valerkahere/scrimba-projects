@@ -9,6 +9,28 @@ const projects = await getCollection('project');
 
 const heading = "My Projects";
 const cta = { text: 'View All', href: '/projects' };
+
+
+// To import images in bulk from a string path (like the one in your Content Collections project.data.image), you use Vite’s import.meta.glob.
+// Astro uses Vite under the hood, and this allows you to create a "map" of all images in a folder so you can look them up by their string path.
+// In your Astro component (or a utility file), use import.meta.glob to grab all images in your src/images/ directory:
+
+
+// 1. Get all images from your images folder
+// Adjust the path to match where your images actually live
+// const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/projects/*.{jpeg,jpg,png,gif,webp}');
+
+// // 2. Get your project data (example)
+// const { project } = Astro.props;
+
+// // 3. Find the specific image matching the string path from your data
+// // project.data.image might be "/src/images/projects/project-1.png"
+// const imagePath = project.data.image;
+
+// if (!images[imagePath]) {
+//   throw new Error(`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,gif,webp}"`);
+// }
+
 ---
 <Section dark={true}>
   <SectionHeader cta={cta} heading={heading}/>
@@ -19,7 +41,7 @@ const cta = { text: 'View All', href: '/projects' };
       projects.map(project => (
         <div class="card">
             <Picture
-              
+              class="img-fluid"
               fetchpriority={project.data.priority ? "high" : "auto"}
               loading={project.data.priority ? "eager" : "lazy"}
               decoding={project.data.priority ? "sync" : "async"}
@@ -30,7 +52,7 @@ const cta = { text: 'View All', href: '/projects' };
               alt={project.data.alt}
           />
 
-          <img src={project.data.image} alt={project.data.title}/>
+          {/* <img src={project.data.image} alt={project.data.title}/> */}
 
           <h3><a href={project.data.liveSiteURL}>{project.data.title}</a></h3>
         </div> 
@@ -42,7 +64,10 @@ const cta = { text: 'View All', href: '/projects' };
 </Section>
 
 <style>
-
+  .img-fluid {
+    height: auto;
+    max-width: 100%;
+  }
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
