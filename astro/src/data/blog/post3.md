@@ -2,7 +2,7 @@
 title: Tailwind vs. Traditional CSS
 description: A deep dive into TailwindCSS vs. traditional styling, performance implications, and developer experience.
 date: "2025-05-01"
-image: "/images/posts/post-1.jpg"
+image: "../src/images/posts/post-3.png"
 tags:
   - CSS
   - Tailwind

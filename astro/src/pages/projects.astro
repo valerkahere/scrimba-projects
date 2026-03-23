@@ -4,6 +4,7 @@ import ButtonLink from "../components/ButtonLink.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import HorizontalSeparator from "../components/HorizontalSeparator.astro";
+import Navbar from "../components/Navbar.astro";
 
 const heading = "My Projects";
 // query projects
@@ -11,6 +12,7 @@ const projects = await getCollection("project");
 console.log(projects);
 ---
 <Layout>
+    <Navbar />
     <Section>
         <h1>{heading}</h1>
         {
