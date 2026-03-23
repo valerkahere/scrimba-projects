@@ -1,4 +1,6 @@
 ---
+import { Picture } from "astro:assets";
+
 import { getCollection } from "astro:content";
 import ButtonLink from "../components/ButtonLink.astro";
 import Layout from "../layouts/Layout.astro";
@@ -9,7 +11,6 @@ import Navbar from "../components/Navbar.astro";
 const heading = "My Projects";
 // query projects
 const projects = await getCollection("project");
-console.log(projects);
 ---
 <Layout>
     <Navbar />
@@ -18,7 +19,17 @@ console.log(projects);
         {
             projects.map((p) => (
                 <div class="card">
-                    <img src={p.data.image} alt={p.data.title} />
+                    <Picture
+                        class="post-image"
+                        fetchpriority={p.data.priority ? "high" : "auto"}
+                        loading={p.data.priority ? "eager" : "lazy"}
+                        decoding={p.data.priority ? "sync" : "async"}
+
+                        formats={["avif", "webp"]}
+                        quality={80}
+                        src={p.data.image}
+                        alt={p.data.alt}
+                    />
                     <div>
                         <h3>{p.data.title}</h3>
                         <p class="description">{p.data.description}</p>

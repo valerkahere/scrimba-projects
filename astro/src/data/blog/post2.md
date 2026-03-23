@@ -2,8 +2,8 @@
 title: Why TypeScript is a Game-Changer for React Devs
 description: Explore why TypeScript is a game-changer for React development, how it improves code quality, and how to integrate it into your workflow.
 date: "2025-04-01"
-image: "../src/images/posts/post-2.png"
-imageBuildPath: "src/images/posts/post-1.jpg"
+image: "../../images/posts/post-2.png"
+alt: "TypeScript shows as a young superhero with electric superpowers"
 tags:
   - TypeScript
   - React

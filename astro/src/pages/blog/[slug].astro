@@ -1,4 +1,6 @@
 ---
+import { Picture } from "astro:assets";
+
 import Layout from '../../layouts/Layout.astro';
 import Section from '../../components/Section.astro';
 import Navbar from '../../components/Navbar.astro';
@@ -24,7 +26,17 @@ const { Content } = await render(post);
     <Navbar/>
     <Section>
         <div class="post">
-            <img src={post.data.imageBuildPath} alt={post.data.title} class="post-image">
+          <Picture
+              class="post-image"
+              fetchpriority={post.data.priority ? "high" : "auto"}
+              loading={post.data.priority ? "eager" : "lazy"}
+              decoding={post.data.priority ? "sync" : "async"}
+
+              formats={["avif", "webp"]}
+              quality={80}
+              src={post.data.image}
+              alt={post.data.alt}
+          />
             <h1 class="post-title">{post.data.title}</h1>
             <p>{post.data.date}</p>
             <Content/>
@@ -34,11 +46,17 @@ const { Content } = await render(post);
 
 <style>
     .post {
+    
+
     .post-image {
-      width: 100%;
+      display: grid;
+      place-self: center;
+      width: 60%;
+      height: auto;
       object-fit: cover;
       margin-bottom: 40px;
       border-radius: 10px;
+
     }
 
     .post-title {

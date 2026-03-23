@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { z } from 'astro/zod';
+import { string } from "astro:schema";
 
 // Configuration object. Verifying the path: astro\src\data\projects.json
 const project = defineCollection({
@@ -13,18 +14,19 @@ const project = defineCollection({
         alt: z.string(),
         githubURL: z.string(),
         liveSiteURL: z.string(),
-        priority: z.boolean(),
+        priority: z.boolean().optional(),
     }),
 });
 const blog = defineCollection({
     loader: glob({pattern: "**/*.md", base: "./src/data/blog"}),
-    schema: z.object({
+    schema: ({image}) => z.object({
         title: z.string(),
         description: z.string().max(200), // will be 200 chars total - cut it down
-        image: z.string(),
-        imageBuildPath: z.string(),
+        image: image(),
+        alt: z.string(),
         date: z.string().date(),
         tags: z.array(z.string()),
+        priority: z.boolean().optional(),
     }),
 });
 
