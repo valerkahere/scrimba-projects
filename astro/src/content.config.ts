@@ -21,6 +21,7 @@ const blog = defineCollection({
         title: z.string(),
         description: z.string().max(200), // will be 200 chars total - cut it down
         image: z.string(),
+        imageBuildPath: z.string(),
         date: z.string().date(),
         tags: z.array(z.string()),
     }),

@@ -3,6 +3,7 @@ title: How to Optimize React Apps for Speed
 description: Learn how to reduce bundle sizes, improve rendering efficiency, and optimize performance in React apps.
 date: "2025-03-01"
 image: "../src/images/posts/post-1.jpg"
+imageBuildPath: "src/images/posts/post-1.jpg"
 tags:
   - Nuxt
   - JavaScript

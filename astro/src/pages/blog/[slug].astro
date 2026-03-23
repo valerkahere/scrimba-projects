@@ -24,7 +24,7 @@ const { Content } = await render(post);
     <Navbar/>
     <Section>
         <div class="post">
-            <img src={post.data.image} alt={post.data.title} class="post-image">
+            <img src={post.data.imageBuildPath} alt={post.data.title} class="post-image">
             <h1 class="post-title">{post.data.title}</h1>
             <p>{post.data.date}</p>
             <Content/>
