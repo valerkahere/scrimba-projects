@@ -13,6 +13,7 @@ const project = defineCollection({
         alt: z.string(),
         githubURL: z.string(),
         liveSiteURL: z.string(),
+        priority: z.boolean(),
     }),
 });
 const blog = defineCollection({

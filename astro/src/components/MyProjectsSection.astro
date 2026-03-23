@@ -1,4 +1,6 @@
 ---
+import { Picture } from "astro:assets";
+
 import Section from "./Section.astro";
 import SectionHeader from "./SectionHeader.astro"
 import { getCollection } from "astro:content";
@@ -13,9 +15,23 @@ const cta = { text: 'View All', href: '/projects' };
 
   <div class="projects-container">
     {
+
       projects.map(project => (
         <div class="card">
+            <Picture
+              
+              fetchpriority={project.data.priority ? "high" : "auto"}
+              loading={project.data.priority ? "eager" : "lazy"}
+              decoding={project.data.priority ? "sync" : "async"}
+
+              formats={["avif", "webp"]}
+              quality={80}
+              src={project.data.image}
+              alt={project.data.alt}
+          />
+
           <img src={project.data.image} alt={project.data.title}/>
+
           <h3><a href={project.data.liveSiteURL}>{project.data.title}</a></h3>
         </div> 
       ))
