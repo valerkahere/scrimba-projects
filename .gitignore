@@ -18,4 +18,14 @@ notes/
 # ignoring node modules
 **node**
 
-.*
+# build output
+dist/
+# generated types
+.astro/
+
+# macOS-specific files
+.DS_Store
+
+# environment variables
+.env
+.env.production
