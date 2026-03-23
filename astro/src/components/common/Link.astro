@@ -1,0 +1,46 @@
+---
+interface Props {
+    text: string;
+    href: string;
+    external: boolean;
+    wrapper: boolean;
+    ariaLabel?: string;
+}
+
+const { 
+  text,
+  href,
+  external = false,
+  wrapper = false,
+  ariaLabel = text,
+
+}
+  = Astro.props;
+
+  // if its external
+  // include target=blank
+  // rel noopener noreferrer
+
+  // if it's a wrapper
+  // and has arialabel
+  // needs to have slot for the icon
+---
+
+{wrapper &&
+<a 
+    href={href}
+    
+>
+    <slot/>
+</a>
+}
+
+{external &&
+    <a 
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+        {text}
+    </a>
+}

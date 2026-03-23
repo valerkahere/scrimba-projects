@@ -1,18 +1,21 @@
 ---
-import Section from "./Section.astro"
+import Section from "./Section.astro";
+
+// astro-icon npm package
+import { Icon } from "astro-icon/components";
 ---
+
 <footer class="footer">
-        <Section dark>
-            <div class="nav-items">
-                <a href="#"><img src="/icons/email.svg" alt=""></a>
-                <a href="#"><img src="/icons/github.svg" alt=""></a>
-                <a href="#"><img src="/icons/linkedin.svg" alt=""></a>
-                <a href="#"><img src="/icons/x.svg" alt=""></a>
-            </div>
-            <p class="rights-text">Copyright © 2025 Astra All rights reserved</p>
-            <p class="credit-text">Images: Flaticon.com</p>
-        </Section>``
-    
+    <Section dark>
+        <div class="nav-items">
+            
+            <Icon class="link" name="bi:mailbox2" />
+            <Icon class="link" name="bi:github" />
+            <Icon name="bi:linkedin" class="link" aria-hidden="true" />
+            <Icon class="link" name="bi:twitter-x" />
+        </div>
+        <p class="rights-text">valerkahere.com ©All Rights Reserved.</p></div>
+    </Section>``
 </footer>
 <style>
     .footer {
@@ -20,28 +23,29 @@ import Section from "./Section.astro"
             text-align: center;
             color: var(--light);
             margin-top: 8px;
-            font-size: 14px
+            font-size: 14px;
         }
         Section {
-            padding: 2rem 0;}
+            padding: 2rem 0;
+        }
         .nav-items {
-        margin-block-end: 1rem;
-        margin-block-start: 1rem;
-        padding-inline-start: 0;
-        list-style-type: none;
-        display: flex;
-        gap: 1.5rem;
+            margin-block-end: 1rem;
+            margin-block-start: 1rem;
+            padding-inline-start: 0;
+            list-style-type: none;
+            display: flex;
+            gap: 1.5rem;
 
-        justify-content: center;
+            justify-content: center;
 
-        a {
-            display: grid;
-            place-items: center; /* Centers both horizontally and vertically */ 
-            img {
-                width: 100%;
+            .link {
+                --size: 2rem;
+                /* Control Size */
+                width: var(--size);
+                height: var(--size);
+                /* display: block is usually safer for SVGs to avoid line-height weirdness */
+                display: block;
             }
         }
-      }
     }
-    
 </style>
