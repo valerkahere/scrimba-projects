@@ -1,0 +1,8 @@
+packages:
+  - "astro"
+  - "vue"
+  - "Front-End-Career-Path"
+allowBuilds:
+  esbuild: false
+  sharp: false
+  
