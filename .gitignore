@@ -7,14 +7,6 @@ notes/
 **private**
 **private**/
 
-
-# ignoring vscode config files
-
-**vscode**
-*.vs*
-**vs**
-**vs**/
-
 # ignoring node modules
 **node**
 
