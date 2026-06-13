@@ -21,3 +21,4 @@ dist/
 # environment variables
 .env
 .env.production
+node_modules/
